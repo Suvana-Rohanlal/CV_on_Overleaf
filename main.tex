@@ -1,0 +1,394 @@
+ %%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=0.6cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+	\usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Suvana Rohanlal}
+\tagline{Electrical and Computer Engineering Student at UCT}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{Suvana}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{1. RHNSUV001@myuct.ac.za}
+  \phone{+27730920243}
+  \location{Cape Town, South Africa}
+ 
+  \email{2. suvana.rohanlal.04@gmail.com}
+  \linkedin{suvana-rohanlal}
+  \github{Suvana-Rohanlal}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.55}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+% \divider
+
+\cvsection{Experience}
+
+\cvevent{Microsoft AppFactory Intern}{OptiSolutions}{Jan 2021 -- Present}{Cape Town, South Africa}
+\begin{itemize}
+\item The Microsoft EEIP AppFactory initiative is a programme by Microsoft to improve the state of software development in South Africa.
+\item I have worked with power apps, to build an app for OptiSolutions. This work was done in a team. 
+\item I also worked with the express framework. Completed the Mozilla developer tutorial on creating a local library website. 
+\item I am currently pursuing the Azure Fundamentals Certification.
+\end{itemize}
+
+\divider
+\cvevent{IT Director}{The Consulting Academy}{Jan 2021 -- Present}{Cape Town, South Africa}
+\begin{itemize}
+\item TCA is a student run consultancy. 
+\item I have been a member of the IT department since 2019 and took up the position as the IT Director in 2021. 
+\item My responsibilities include managing the website, managing the communication tools (eg. Slack), finding new tools for the other departments. 
+\item I am currently planning a project to create a member portal. 
+\end{itemize}
+
+\divider
+
+\cvevent{Research Intern}{UCT Electrical Department}{Nov 2019 -- Jan 2020}{Cape Town, Western Cape}
+\begin{itemize}
+\item Researched an HF Radar project
+\item Worked on Xilinx and the Red Pitaya FPGA
+\end{itemize}
+
+\divider
+
+\cvevent{Student Intern}{Gledhow Sugar Mill}{Dec 2016 -- Jan 2017}{Kwa Dukuza, Kwa-Zulu Natal}
+\begin{itemize}
+\item In order to gain work experience, I worked at the Gledhow Sugar Company in the Electrical department.
+\item  I was mentored by the Electrical Engineer In Training.
+\item Gained skills in welding, working with sensors, electrical maintenance. 
+\end{itemize}
+
+\newpage
+\cvsection{Projects}
+%\cvevent{Developer for a project}{Safepro}{}{}
+%\begin{itemize}
+%\item Developed an app and website.
+%\item Languages used: App(Kotlin on android studio with firebase), website(Python, HTML, CSS on Flask with firebase).
+%\end{itemize}
+
+%\divider
+
+\cvevent{2D Sonar Imaging Device}{UCT EE Department}{}{}
+\begin{itemize}
+    \item Calculated the distance of an object 
+    \item 3rd year ECE Design
+    \item Gained arduino skills along with skills in the languages Julia and Python. 
+\end{itemize}
+
+\divider
+
+\cvevent{Environment Logger}{UCT EE Department}{}{}
+\begin{itemize}
+    \item Created using the raspberry pi 
+    \item Embedded Systems II (3rd year)
+    \item Gained Python skills for a raspberry pi 3 as well as Latex for report writing.
+\end{itemize}
+
+\divider
+
+\cvevent{Digital Wall Clock}{UCT EE Department}{}{}
+\begin{itemize}
+    \item Created on the Nexys A7 FPGA 
+    \item High Performance Computing (4th year)
+    \item Gained Verilog skills on platforms Vivado and EDA playground
+\end{itemize}
+
+% \divider
+
+
+\cvsection{Extracurricular}
+
+\cvsubsection{Tutoring}
+
+\cvevent{Embedded Systems I Tutor}{UCT Electrical Department}{Jan 2021 -- Present}{Cape Town, South Africa}
+Class tutor for an engineering second year course, Embedded Systems I. I assist students with practicals, mark their practicals and answer the students queries.
+
+\divider
+
+\cvevent{Computer Science Tutor}{Private Tutoring}{Jan 2021 -- Present}{Cape Town, South Africa}
+Private tutor for the second year computer science course. I assist with the assignments and teach the relevant content. 
+
+\divider
+
+
+\cvevent{Embedded Systems II Tutor}{UCT Electrical Department}{July 2020 -- Nov 2020}{Cape Town, South Africa}
+Class tutor for an engineering third year course, Embedded Systems II. I assisted with running the labs, marking practicals and answering the students queries.
+
+\divider
+
+\cvsubsection{Google competitions}
+I participated in hash code, code jam and kickstart in 2020 and 2021. 
+
+%\cvsubsection{Societies and clubs}
+%\cvevent{Hindu Student Society}{}{2018}{}
+%Member of sub-committee
+
+%\divider
+
+%\cvevent{Women in Computer Science}{}{2019 - 2020}{}
+%\begin{itemize}
+%    \item Mentor (2019)
+%    \item Member of sub-committee (2019 and 2020)
+%\end{itemize}
+%\divider
+%\cvevent{We Are Animals}{}{2017 - 2019}{}
+%\begin{itemize}
+%    \item SPCA - volunteer for animal welfare
+%    \item Leaps adoption - Aided with finding homes for dogs and their fundraiser. 
+%\end{itemize}
+
+%\divider
+%\cvevent{Google Developer Student Club}{}{2020}{}
+%Tech mentor 
+
+
+
+
+\newpage
+
+\medskip
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``You only fail when you stop trying.''
+\end{quote}
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ Electrical and Computer Engineering}{University of Cape Town}{Feb 2016 -- Nov 2021}{South Africa}{GPA: 59.73 (Scale 0-100)}
+
+\divider
+ 
+\cvevent{National Senior Certificate(Bachelor Pass)}{Stanger Manor Secondary}{2015}{South Africa}
+
+
+
+\cvsection{Professional Skills}
+
+\cvtag{Hard-working}
+\cvtag{Problem solving}\\
+\cvtag{Leadership}
+\cvtag{Teamwork}
+\cvtag{Presentation}\\
+\cvtag{Time-management}
+\cvtag{Effective Communication}
+
+\divider
+
+\cvtag{Java}
+\cvtag{Embedded Systems}
+\cvtag{Python}\\
+\cvtag{HTML/CSS}
+\cvtag{Javascript}
+\cvtag{React}
+\cvtag{C++}\\
+\cvtag{Basic Verilog}
+\cvtag{Microsoft Office} 
+\cvtag{LaTex}\\
+\cvtag{Power apps} 
+\cvtag{Express-framework}
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{Hindi}{4}
+\divider
+
+\cvskill{Afrikaans}{3}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vpsace etc to make ajustments.
+\medskip
+\cvsection{Achievements}
+
+\cvevent{Google Dev Fest}{}{November 2019}{}
+Selected to attend the google developer conference. Answered a tech related question and won a prize.
+
+\divider
+
+\cvevent{Award from Residence}{}{2016}{}
+Received a course distinction award from campus residence.
+
+
+
+
+
+
+\newpage
+\cvsubsection{External Competitions}
+%\cvevent{Google Code Jam}{}{2020}{}
+%Participated in Code Jam for Females
+
+%\divider
+%\cvevent{Google Hash Code}{}{2020}{}
+%Participated in the team hash code event
+
+%\divider
+
+%\cvevent{Google Kickstart}{}{2020}{}
+%Participated in round C of 2020.
+
+%\divider
+
+\cvevent{Girl Code Hackathon}{}{2020}{}
+Participated in the girl code hackathon for 2020. Our topic was to come up with a solution to help solve the UN sustainable goals. 
+
+\divider
+
+\cvevent{DSC UCT Hackathon}{}{2020}{}
+Participated in the girl code hackathon for 2020. Our topic was to come up with a solution to help small businesses during COVID-19. 
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+
+\divider
+
+\cvsubsection{Tech-focused developmental program}
+
+\cvevent{Google Get Ahead Program}{}{2020}{}
+\begin{itemize}
+    \item Participated in an 8 week exclusive virtual program for selected CS students from all over EMEA.
+    \item The program involved technical challenges, YouTube live trainings and interview workshops.
+\end{itemize}
+\divider
+
+\cvevent{Zaio}{}{2018-2019}{}
+\begin{itemize}
+    \item Completed front-end web development course (2018)
+    \item Course consisted of HTML, CSS, JavaScript, bootstrap and React
+    \item Mentor (2019)
+\end{itemize}
+
+
+
+
+\cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Associate Prof.\ A Wilkinson}{UCT}{Andrew.Wilkinson@uct.ac.za}
+{}
+
+\divider
+
+\cvref{Lecturer Anita Campbell}{UCT}{anita.campbell@uct.ac.za}
+{}
+
+\divider
+
+\cvref{Mr. Julian Kanjere -  Mentor for Microsoft AppFactory}{OptiSolutions}{jkanjere@optisolutions.co.za}
+{}
+
+
+
+\end{paracol}
+
+
+\end{document}
